@@ -1,0 +1,71 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:wght@800&display=swap');
+
+
+body {
+  background: linear-gradient(-45deg, #FDCAC5, #FDEDEC, #FDE4E1);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  color:#4a4a4a;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.8rem;
+
+}
+
+h1 {
+  font-family: Raleway, sans-serif;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+h2  {
+  font-family: Raleway, sans-serif;
+  color:#5e5d5d;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+}
+
+
+
+a {
+  color:#727272;
+}
+
+a:hover {
+  background-color: #FFF;
+  text-decoration: none;
+  color:#727272;
+}
+
+.salmon {
+  color: #FA8072;
+}
+
+.container {
+  padding-top: 5rem;
+}
+
+#paper .container {
+  background-color: white;
+  box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.1);
+  margin-bottom: 8rem;
+  padding-bottom: 2.5rem;
+  padding-top: 2rem;
+}
+
+/* ANIMATION */
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
