@@ -1,29 +1,37 @@
 var xoff = 0;
 var yoff = 1;
+let slider;
+let slider2;
 
 
 function setup() {
   let cnv = createCanvas(400, 400);
   // cnv.position(windowHeight/2-200, windowWidth/2-200);
+  slider=createSlider(0, 100, 100);
+  slider2=createSlider(0,100,100);
+  slider.style('width', '400px');
+  slider2.style('width', '400px');
 
 }
 
 function draw() {
   background(25);
-
+  let val2 = slider2.value();
+  let val = slider.value();
+  val = val/100;
+  val2 = val2/100;
 
   var x = map(noise(xoff), 0,1,0,400);
   var y = map(noise(yoff), 0,1,0,400);
   var rc = random(0,255);
-  xoff += 0.01;
-  yoff -= 0.01;
+  xoff += 0.02*val;
+  yoff -= 0.02*val2;
 
   noStroke();
 
   z=0;
   for (let i = 0; i < 2; i++) {
   z=z+80;
-  print(z);
   fill(255, 203, 100);
   rect(x/2+z, y/4, 40,40);
 
