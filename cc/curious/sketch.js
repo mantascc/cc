@@ -4,7 +4,7 @@ var yoff = 1;
 
 function setup() {
   let cnv = createCanvas(400, 400);
-  cnv.position(windowHeight/2-200, windowWidth/2-200);
+  // cnv.position(windowHeight/2-200, windowWidth/2-200);
 
 }
 
@@ -17,9 +17,9 @@ function draw() {
   var rc = random(0,255);
   xoff += 0.01;
   yoff -= 0.01;
-  
+
   noStroke();
-  
+
   z=0;
   for (let i = 0; i < 2; i++) {
   z=z+80;
@@ -29,18 +29,17 @@ function draw() {
 
   fill(0, 0, 0);
   rect(x/2+z+20, y/4+20, 20,20);
-  
+
 }
-  
 
-  
 
-  
+
+
+
   fill(245, 150, 50);
   rect(x, y, 20,20);
-  
+
   fill (255);
   rect(x, y*0.2+300, 100,10);
 
 }
-
