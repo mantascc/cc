@@ -5,7 +5,8 @@ let mic;
 
 
 function setup() {
-  let cnv = createCanvas(windowWidth, windowHeight);
+  let cnv = createCanvas(400, 400);
+  cnv.position(windowHeight/2-200, windowWidth/2-200);
   cnv.mousePressed(userStartAudio);
   textAlign(CENTER);
   mic = new p5.AudioIn();
@@ -13,12 +14,12 @@ function setup() {
 }
 
 function draw() {
-  background(25, 25, 25);
+  background(25);
   micLevel = mic.getLevel();
   print(micLevel);
   
-  var x = map(noise(xoff), 0,1,height,width);
-  var y = map(noise(yoff), 0,1,height,width);
+  var x = map(noise(xoff), 0,1,0,width);
+  var y = map(noise(yoff), 0,1,0,width);
   var rc = random(0,255);
   xoff += micLevel;
   yoff -= micLevel/5;
