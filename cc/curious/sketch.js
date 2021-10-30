@@ -12,8 +12,8 @@ function draw() {
   background(25);
 
 
-  var x = map(noise(xoff), 0,1,0,width);
-  var y = map(noise(yoff), 0,1,0,width);
+  var x = map(noise(xoff), 0,1,0,400);
+  var y = map(noise(yoff), 0,1,0,400);
   var rc = random(0,255);
   xoff += 0.01;
   yoff -= 0.01;
@@ -28,7 +28,7 @@ function draw() {
   rect(x/2+z, y/4, 40,40);
 
   fill(0, 0, 0);
-  rect(x/2+z+20, y/4+20, 20,20);
+  rect(x/2+z+15+x*0.01, y/4+15+y*0.03, 20,20);
 
 }
 
