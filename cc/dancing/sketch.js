@@ -17,8 +17,8 @@ function draw() {
   micLevel = mic.getLevel();
   print(micLevel);
   
-  var x = map(noise(xoff), 0,1,0,width);
-  var y = map(noise(yoff), 0,1,0,width);
+  var x = map(noise(xoff), 0,1,height,width);
+  var y = map(noise(yoff), 0,1,height,width);
   var rc = random(0,255);
   xoff += micLevel;
   yoff -= micLevel/5;
