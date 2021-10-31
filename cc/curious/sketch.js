@@ -8,7 +8,9 @@ function setup() {
   let cnv = createCanvas(400, 400);
   // cnv.position(windowHeight/2-200, windowWidth/2-200);
   slider=createSlider(0, 100, 100);
+  slider.position(0, 420);
   slider2=createSlider(0,100,100);
+  slider2.position(0, 440);
   slider.style('width', '400px');
   slider2.style('width', '400px');
 
